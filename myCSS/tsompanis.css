@@ -1,3 +1,252 @@
+#mediastrom{
+  width: 10em;
+  height: auto;
+}
+
+
+
+/*
+
+#main-logo{
+  margin: 50px;
+  width: 519px;
+  height:105px;
+}
+
+*/
+
+/*Backtotop*/
+
+#backtotop {
+  display: inline-block;
+  background-color: #1C2331;
+  width: 80px;
+  height: 50px;
+  text-align: center;
+  border-radius: 50px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#backtotop::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#backtotop:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#backtotop:active {
+  background-color: #555;
+}
+#backtotop.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Styles for the content section */
+
+.content {
+  width: 77%;
+  margin: 50px auto;
+  font-family: 'Merriweather', serif;
+  font-size: 17px;
+  color: #6c767a;
+  line-height: 1.9;
+}
+@media (min-width: 500px) {
+
+  #backtotop {
+    margin: 30px;
+  }
+}
+
+
+/*backtotop end*/
+
+
+/*nav bar overlay for phones*/
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 10%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 26px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+@media screen and (max-height: 767px) {
+  .line-bar{
+    display: none;
+  }
+}
+
+@media screen and (min-height: 767px) {
+  .hamburger{
+    display: none;
+  }
+}
+
+/*end nav bar overlay*/
+
+
+/*Main screen carousel*/
+
+.carousel{
+  z-index: 0;
+}
+
+
+/*bar menu*/
+
+.cbp-hsmenu-wrapper .cbp-hsmenu {
+    padding-left: 6.5em;
+}
+
+.cbp-hsmenu > li.cbp-hsitem-open .cbp-hssubmenu {
+  background-color: #F8F9FA;
+}
+
+.line-bar{
+  padding-right:0; 
+  padding-left:0;
+  z-index:-1
+}
+
+@media (max-width: 1200px) {
+  .cbp-hsmenu-wrapper .cbp-hsmenu {
+      padding-left: 0;
+  }
+}
+
+
+/*Logo carousel */
+
+.no-js .owl-carousel, .owl-carousel.owl-loaded {
+    z-index: 0;
+}
+
+.brands {
+     width: 100%;
+     padding-top: 90px;
+     padding-bottom: 90px
+ }
+
+ .brands_slider_container {
+
+     border: solid 1px #e8e8e8;
+     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+     padding-left: 97px;
+     padding-right: 97px
+ }
+
+ .brands_slider {
+     height: 100%;
+     margin: 10px;
+ }
+
+ .brands_item {
+     height: 100%
+ }
+
+ .brands_item img {
+     max-width: 100%
+ }
+
+ .brands_nav {
+     position: absolute;
+     top: 50%;
+     -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
+     -ms-transform: translateY(-50%);
+     -o-transform: translateY(-50%);
+     transform: translateY(-50%);
+     padding: 5px;
+     cursor: pointer
+ }
+
+ .brands_nav i {
+     color: #e5e5e5;
+     -webkit-transition: all 200ms ease;
+     -moz-transition: all 200ms ease;
+     -ms-transition: all 200ms ease;
+     -o-transition: all 200ms ease;
+     transition: all 200ms ease
+ }
+
+ .brands_nav:hover i {
+     color: #676767
+ }
+
+ .brands_prev {
+     left: 40px
+ }
+
+ .brands_next {
+     right: 40px
+ }
+
+/*logo carousel end*/
+
+
 .company-desc{
   padding: 3rem;
 }
@@ -24,15 +273,18 @@
   display: grid;
   position: -webkit-sticky;
   position: sticky;
-  top: 50px;
+  top: 80px;
 }
 
 @media (max-width: 1200px) {
   #myBtnContainer {
-    display: inline-block;
     padding-bottom: 5px;
-    background-color: #FFFFFF
-
+    background-color: #FFFFFF;
+  }
+  .follow{
+    position: static;
+    margin-right: auto;
+    margin-left: auto;
 
   }
 }
@@ -126,7 +378,7 @@ div.dropdown-multicol2>div.dropdown-col{
   bottom: 0;
   left: 0;
   right: 0;
-  background: #B49C83;
+  background: #C49972;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 50%;
@@ -408,12 +660,11 @@ position:absolute;
 
 
 
-
+/*image grid zoom*/
 
 
 
 #myImg {
-  border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -448,8 +699,9 @@ position:absolute;
 .modal-content {
   margin: auto;
   display: block;
-  width: 80%;
-  max-width: 700px;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 #caption {
@@ -497,13 +749,13 @@ position:absolute;
 
 @media only screen and (max-width: 700px) {
   .modal-content {
-    width: 100%;
+    width: auto;
   }
 }
 
 
 
-
+/*image grid zoom end*/
 
 
 

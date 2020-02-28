@@ -1,11 +1,18 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		
+		<!--Favicon-->
+		<link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="imgs/favicon.ico" type="image/x-icon">
+		<!--end-->
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Abril+Fatface" rel="stylesheet">		
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />	
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<!--CSSMenuLine-->
+	    <link rel="stylesheet" type="text/css" href="css/default.css" />
+	    <link rel="stylesheet" type="text/css" href="css/component2.css" />
+	    <!--endCSSmenuline-->
 
 		<script>
 			document.documentElement.className = 'js';
@@ -33,6 +40,9 @@
 
 	    <link rel="stylesheet" href="myCSS/tsompanis.css">
 
+		<!--Menuline-->
+        <script src="js/modernizr.custom.js"></script>
+        <!--endMenuLine-->
 	   
 	    <title>Έπιπλο Τσομπάνης</title>
 	</head>
@@ -40,79 +50,76 @@
 
 
 <!--Nav Bar-->
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<!--logo-->
-		<a class="navbar-brand" href="homepage.php">
-	    	<img src="imgs/logotransparent.png" width="100%" class="d-inline-block align-top" alt=""> 
-	  	</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="index.php">
+    <img src="imgs/logotransparent.png" width="100%" class="d-inline-block align-top" alt=""> 
+  </a>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <div id="myNav" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <div class="overlay-content">
+            <a href="index.php"><i class="fas fa-home"></i> Αρχική</a>
+            <a href="bedroom.php">Κρεβατοκάμαρα</a>
+            <a href="sofas.php">Σαλόνι</a>
+            <a href="dining-room.php">Τραπεζαρία</a>
+            <a href="kids-room.php">Παιδικό δωμάτιο</a>
+            <a href="stores.php">Καταστήματα</a>
+            <a href="company.php">Εταιρία</a>
+          </div>
+        </div>
+        <span class="hamburger" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+      </li>
+      <li class="nav-item">
+         
+      </li>
+      <li class="nav-item">
+         
+      </li>
+    </ul>
+    <span class="navbar-text">
+      <img src="imgs/phone.svg" id="top-phone" alt="">Τηλ. 23850 24959 - 23707</img>
+    </span>
+</nav>
+<!--End Nav Bar-->
 
 
-	 	 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-	   	 <span class="navbar-toggler-icon"></span>
-	  	 </button>
-
-		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-		    <ul class="navbar-nav mr-auto">
-		      
-
-		      <li class="nav-item active">
-		        <a class="nav-link" href="homepage.php"> 
-		        	<button type="button" class="btn btn-outline-dark">Home</button>
-		        	
-		        </a>
-		      </li>
-
-
-		      <li class="nav-item">
-		        <a class="nav-link" href="company.php">
-		        	<button type="button" class="btn btn-outline-dark">Εταιρία</button>
-		        </a>
-		      </li>
-
-
-		      <li class="nav-item">
-		        <a class="nav-link" href="stores.php">
-		        	<button type="button" class="btn btn-outline-dark">Καταστήματα</button>
-		        </a>
-		      </li>
-
-
-		      <li class="nav-item dropdown">
-		        <a class="nav-link" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		          <button type="button" class="btn btn-outline-dark dropdown-toggle" id="dropdownMenuButton">Προιόντα</button>
-		          <span class="sr-only">(current)</span>
-		        </a>
-				  <div class="dropdown-menu dropdown-menu-right dropdown-multicol2" aria-labelledby="dropdownMenuButton">
-				    <div class="dropdown-col">
-				      <a class="dropdown-item" href="bedroom.php">Κρεβατοκάμαρα</a>
-				      <a class="dropdown-item" href="#">-</a>
-				      <a class="dropdown-item" href="#">-</a>
-				    </div>
-				    <div class="dropdown-col">
-				      <a class="dropdown-item" href="sofas.php">Σαλόνι</a>
-				      <a class="dropdown-item" href="#">-</a>
-				      <a class="dropdown-item" href="#">-</a>
-				    </div>
-				    <div class="dropdown-col">
-				      <a class="dropdown-item" href="dinner-room.php">Τραπεζαρία</a>
-				      <a class="dropdown-item" href="#">-</a>
-				      <a class="dropdown-item" href="#">-</a>
-				    </div>
-				    <div class="dropdown-col">
-				      <a class="dropdown-item" href="kids-room.php">Παιδικό δωμάτιο</a>
-				      <a class="dropdown-item" href="#">-</a>
-				      <a class="dropdown-item" href="#">-</a>
-				    </div>
-				  </div>
-		      </li>
-
-		    </ul>
-
-		   	<img src="imgs/phone.svg" id="top-phone" alt="">Τηλ. 23850 24959 - 23707</img> 
-			   
-	  	</div>
-	</nav>
-
+   <!--Menu Line -->
+	<div class="container line-bar follow">
+      <div class="main">
+        <nav class="cbp-hsmenu-wrapper" id="cbp-hsmenu-wrapper">
+          <div class="cbp-hsinner">
+            <ul class="cbp-hsmenu">
+              <li><a href="index.php"><i class="fas fa-home"></i> Αρχική</a></li>
+              <li>
+                <a href="#">Προϊόντα</a>
+                <ul class="cbp-hssubmenu cbp-hssub-rows">
+                  <li><a href="bedroom.php"><img src="images/rsz_bedroom2.png" alt="bedroom"/><span>Κρεβατοκάμαρα</span></a></li>
+                  <li><a href="sofas.php"><img src="images/rsz_sofa2.png" alt="sofa"/><span>Σαλόνι</span></a></li>
+                  <li><a href="dining-room.php"><img src="images/rsz_table2.png" alt="table"/><span>Τραπεζαρία</span></a></li>
+                  <li><a href=kids-room.php><img src="images/rsz_kids2.png" alt="kids-room-img"/><span>Παιδικό δωμάτιο</span></a></li>
+                </ul>
+              </li>
+        <!--
+              <li>
+                <a href="#">one line obj</a>
+                <ul class="cbp-hssubmenu">
+                  <li><a href="#"><img src="" alt="img10"/><span>title</span></a></li>
+                  <li><a href="#"><img src="" alt="img06"/><span>title</span></a></li>
+                  <li><a href="#"><img src="" alt="img09"/><span>title</span></a></li>
+                </ul>
+              </li>
+          -->
+              <li><a href="stores.php">Καταστήματα</a></li>
+              <li><a href="company.php">Εταιρία</a></li>
+              <li><a href="index.php#form-name">Επικοινωνία</a></li>
+              <li><a href="index.php#map-container-google-11">Τοποθεσία</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+   <!--End Menu Line-->
 
 
 <!--paralax-->
@@ -123,11 +130,12 @@
   <div class="row">
    
 
-    <div class="col- follow">
+    <div class="col- follow" style="z-index:0;">
     	<div id="myBtnContainer">
-		  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-		  <button class="btn" onclick="filterSelection('Selection1')"> Selection1</button>
-		  <button class="btn" onclick="filterSelection('Selection2')"> Selection2</button>
+		  <button class="btn active" onclick="filterSelection('all')"> ΟΛΑ</button>
+		  <button class="btn" onclick="filterSelection('klasiki')"> Κλασικη Κρεβατοκαμαρα</button>
+		  <button class="btn" onclick="filterSelection('monterna')"> Μοντερνα Κρεβατοκαμαρα</button>
+		  <div href="https://www.mediastrom.com/el/"> <img id="mediastrom" src="imgs/media.png" alt="sofa"/> </div>
 		</div>
     </div>
 
@@ -138,61 +146,417 @@
 	<div class="card-columns">
 
 
-			<div class="filterDiv Selection1">
+			<div class="filterDiv klasiki">
 			<div class="card">
-			  <img id="myImg" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg" class="card-img-top" alt="Card1">
+			  <img id="myImg" src="imgs/bedroom/klasiki-krevatokamara/7.jpg" class="card-img-top" alt="Card1">
 			  <div class="card-body">
-			    <p class="card-text">TEST 1</p>
+			    <p class="card-text">-</p>
 			  </div>
 			</div>
 			</div>
-						
+	
 
-			<div class="filterDiv Selection2">
+			<div class="filterDiv klasiki">
 			<div class="card">
-			  <img  id="myImg" src="https://mdbootstrap.com/img/Photos/Vertical/mountain1.jpg" class="card-img-top" alt="Card2">
+			  <img id="myImg" src="imgs/bedroom/klasiki-krevatokamara/bedroomimage1.jpg" class="card-img-top" alt="Card1">
 			  <div class="card-body">
-			    <p class="card-text">tEST 2</p>
-			  </div>
-			</div>
-			</div>
-		
-			<div class="filterDiv Selection2">
-		  	<div class="card">
-			  <img  id="myImg" src="https://mdbootstrap.com/img/Photos/Vertical/mountain3.jpg" class="card-img-top" alt="Card2">
-			  <div class="card-body">
-			    <p class="card-text">TEST 3</p>
+			    <p class="card-text">-</p>
 			  </div>
 			</div>
 			</div>
 
+			<div class="filterDiv klasiki">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/klasiki-krevatokamara/epiplo-klassiko-krebatokamara-glamour-epixilon1.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
 
-			<div class="filterDiv Selection2">
+			<div class="filterDiv klasiki">
 			<div class="card">
-			  <img id="myImg" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg" class="card-img-top" alt="Card1">
+			  <img id="myImg" src="imgs/bedroom/klasiki-krevatokamara/epiplo-klassiko-krebatokamara-mocca-epixilon1.jpg" class="card-img-top" alt="Card1">
 			  <div class="card-body">
-			    <p class="card-text">TEST 1</p>
+			    <p class="card-text">-</p>
 			  </div>
 			</div>
 			</div>
-						
-			<div class="filterDiv Selection1">
+
+			<div class="filterDiv klasiki">
 			<div class="card">
-			  <img  id="myImg" src="https://mdbootstrap.com/img/Photos/Vertical/mountain1.jpg" class="card-img-top" alt="Card2">
+			  <img id="myImg" src="imgs/bedroom/klasiki-krevatokamara/kr_K3.png" class="card-img-top" alt="Card1">
 			  <div class="card-body">
-			    <p class="card-text">tEST 2</p>
+			    <p class="card-text">-</p>
 			  </div>
 			</div>
 			</div>
-		
-			<div class="filterDiv Selection1">
-		 	<div class="card">
-			  <img  id="myImg" src="https://mdbootstrap.com/img/Photos/Vertical/mountain3.jpg" class="card-img-top" alt="Card2">
+
+			<div class="filterDiv klasiki">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/klasiki-krevatokamara/kr_k4.jpg" class="card-img-top" alt="Card1">
 			  <div class="card-body">
-			    <p class="card-text">TEST 3</p>
+			    <p class="card-text">-</p>
 			  </div>
 			</div>
 			</div>
+
+			<div class="filterDiv klasiki">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/klasiki-krevatokamara/ariadni4.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv klasiki">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/klasiki-krevatokamara/ariadni4a.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv klasiki">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/klasiki-krevatokamara/valentini3.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv klasiki">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/klasiki-krevatokamara/danai1.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv klasiki">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/klasiki-krevatokamara/dafni5.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv klasiki">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/klasiki-krevatokamara/danai3.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv klasiki">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/klasiki-krevatokamara/elena.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv klasiki">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/klasiki-krevatokamara/hra6.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv klasiki">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/klasiki-krevatokamara/smaragda9.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv klasiki">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/klasiki-krevatokamara/smaragda9a.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv klasiki">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/klasiki-krevatokamara/danai2.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv monterna">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/monterna-krevatokamara/city-krevatokamares-delezakis-1.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv monterna">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/monterna-krevatokamara/curve-1-delezakis.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv monterna">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/monterna-krevatokamara/d-three-1-delezakis.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv monterna">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/monterna-krevatokamara/enjoy-krevatokamares-delezakis-1.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv monterna">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/monterna-krevatokamara/fabric-bed-old-No1-senza.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv monterna">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/monterna-krevatokamara/fabric-bed-old-No2_ultra.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv monterna">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/monterna-krevatokamara/fabric-bed-old-No3_ultra.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv monterna">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/monterna-krevatokamara/kr_k5.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv monterna">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/monterna-krevatokamara/kr10.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv monterna">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/monterna-krevatokamara/krebatokamara-dream-xylo-drys-roustik-laka-me-fwtismo-sto-kefalari.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv monterna">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/monterna-krevatokamara/krm3.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv monterna">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/monterna-krevatokamara/krm4.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv monterna">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/monterna-krevatokamara/krm5.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv monterna">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/monterna-krevatokamara/krm6.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv monterna">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/monterna-krevatokamara/krm6a.png" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv monterna">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/monterna-krevatokamara/krm7.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv monterna">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/monterna-krevatokamara/krm8.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv monterna">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/monterna-krevatokamara/krm9.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv monterna">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/monterna-krevatokamara/krm10.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv monterna">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/monterna-krevatokamara/krm11.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv monterna">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/monterna-krevatokamara/krm13.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv monterna">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/monterna-krevatokamara/krm14.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv monterna">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/monterna-krevatokamara/krm16.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv monterna">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/monterna-krevatokamara/krm17.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv monterna">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/monterna-krevatokamara/lavish-delezakis-krebatokamara-1.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv monterna">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/monterna-krevatokamara/venus-1-delezakis.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv monterna">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/monterna-krevatokamara/1d73e13563b8be946c0f00bab252d7ea_XL.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+			<div class="filterDiv monterna">
+			<div class="card">
+			  <img id="myImg" src="imgs/bedroom/monterna-krevatokamara/bedroomA103.jpg" class="card-img-top" alt="Card1">
+			  <div class="card-body">
+			    <p class="card-text">-</p>
+			  </div>
+			</div>
+			</div>
+
+
+
+
+
+
 
 
 		</div>
@@ -222,7 +586,7 @@
 <!-- Footer -->
 <footer class="page-footer font-small unique-color-dark">
 
-  <div style="background-color: #B49C83;">
+  <div style="background-color: darkslategrey;">
     <div class="container">
 
       <!-- Grid row-->
@@ -230,29 +594,23 @@
 
         <!-- Grid column -->
         <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-          <h6 class="mb-0">Βρείτε μας στα social networks!</h6>
+          <h6 class="mb-0">Ακολουθήστε μας στα Social Media!</h6>
         </div>
         <!-- Grid column -->
 
         <!-- Grid column -->
         <div class="col-md-6 col-lg-7 text-center text-md-right">
 
-          <!-- Facebook -->
-          <a class="fb-ic">
-            <i class="fab fa-facebook-f white-text mr-4"> </i>
-          </a>
           <!-- Twitter -->
           <a class="tw-ic">
             <i class="fab fa-twitter white-text mr-4"> </i>
           </a>
-          <!-- Google +-->
-          <a class="gplus-ic">
-            <i class="fab fa-google-plus-g white-text mr-4"> </i>
-          </a>
+
           <!--Linkedin -->
           <a class="li-ic">
             <i class="fab fa-linkedin-in white-text mr-4"> </i>
           </a>
+
           <!--Instagram-->
           <a class="ins-ic">
             <i class="fab fa-instagram white-text"> </i>
@@ -279,7 +637,7 @@
         <!-- Content -->
         <h6 class="text-uppercase font-weight-bold">ΕΠΙΠΛΟ ΤΣΟΜΠΑΝΗΣ</h6>
         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-        <p>-</p>
+        <p>54 χρόνια στην αγορα του επίπλου με την ίδια φιλοσοφία και μεράκι που μας ξεχώρισε και μας ανέβασε στις προτιμήσεις σας.</p>
 
       </div>
       <!-- Grid column -->
@@ -297,7 +655,7 @@
           <a href="sofas.php">Σαλόνι</a>
         </p>
         <p>
-          <a href="dinning-room.php">Τραπεζαρία</a>
+          <a href="dining-room.php">Τραπεζαρία</a>
         </p>
         <p>
           <a href="kids-room.php">Παιδικό δωμάτιο</a>
@@ -330,7 +688,7 @@
         <p>
           <i class="fas fa-home mr-3"></i> Φλώρινα, ΤΚ: 53100, Ελλάδα</p>
         <p>
-          <i class="fas fa-envelope mr-3"></i> ol484p@otenet.gr</p>
+          <i class="fas fa-envelope mr-3"></i> epiplotsompanis@gmail.com</p>
         <p>
           <i class="fas fa-phone mr-3"></i> +30 23850 24959</p>
         <p>
@@ -346,19 +704,37 @@
   <!-- Footer Links -->
 
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2019 Copyright:
-    <a href="https://mdbootstrap.com/education/bootstrap/"> epiplotsompanis.gr</a>
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://epiplotsompanis.gr"> epiplotsompanis.gr</a>
   </div>
   
   <!-- Copyright -->
 
 </footer>
-<!-- Footer -->
-<!-- Footer -->
+<!-- End Footer -->
 
 
 
 	    <!-- Optional JavaScript -->
+	        	<!--nav bar overlay for phones-->
+        <script>
+			/* Open when someone clicks on the span element */
+			function openNav() {
+			  document.getElementById("myNav").style.width = "100%";
+			}
+
+			/* Close when someone clicks on the "x" symbol inside the overlay */
+			function closeNav() {
+			  document.getElementById("myNav").style.width = "0%";
+			}
+		</script>
+		<!-- end of nav bar overlay for phones-->
+	    <!--menubar js-->
+    	<script src="js/cbpHorizontalSlideOutMenu.min.js"></script>
+	    <script>
+	      var menu = new cbpHorizontalSlideOutMenu( document.getElementById( 'cbp-hsmenu-wrapper' ) );
+	    </script>
+	    <!--End Menu Bar JS-->
 	    
 	    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
